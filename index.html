@@ -1,0 +1,282 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>JAG Software Ace Enterprises</title>
+  <meta name="description" content="JAG Software Ace Enterprises delivers cloud-first engineering, containerization, and scalable web solutions." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <!-- Top Bar -->
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="JAG Software Ace Enterprises Home">
+        <img class="brand__logo" src="assets/jaceg_logo.jpg" alt="JAG Software Ace Enterprises logo" />
+        <div class="brand__text">
+          <span class="brand__name">JAG Software Ace Enterprises</span>
+          <span class="brand__tag">Cloud-first. Reliable. Scalable.</span>
+        </div>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#approach">Approach</a>
+        <a href="#about">About</a>
+        <a class="btn btn--small" href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main id="top">
+    <section class="hero">
+      <div class="container hero__grid">
+        <!-- Big subtle logo watermark (more “spread out” branding) -->
+        <div class="hero__watermark" aria-hidden="true"></div>
+
+        <div class="hero__content">
+          <p class="pill">Cloud Computing • Containerization • DevOps</p>
+          <h1>Build and scale confidently in the cloud.</h1>
+          <p class="hero__lead">
+            JAG Software Ace Enterprises helps teams move faster with cloud-native architecture,
+            secure deployments, and reliable infrastructure — without the complexity.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn" href="#contact">Request a consult</a>
+            <a class="btn btn--ghost" href="#services">Explore services</a>
+          </div>
+
+          <div class="hero__stats">
+            <div class="stat">
+              <span class="stat__num">Cloud-first</span>
+              <span class="stat__label">Design + delivery</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">Secure</span>
+              <span class="stat__label">Best practices built-in</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num">Container-ready</span>
+              <span class="stat__label">Repeatable deployments</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__card" role="presentation">
+          <div class="card">
+            <h2 class="card__title">What we do</h2>
+            <ul class="checklist">
+              <li>Deploy static + dynamic apps on cloud infrastructure</li>
+              <li>Containerize services with Docker and CI/CD</li>
+              <li>Design scalable APIs and backend systems</li>
+              <li>Improve reliability with monitoring + automation</li>
+            </ul>
+            <div class="card__note">
+              <strong>Focus:</strong> clean architecture, predictable costs, and production-ready delivery.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Services</h2>
+          <p>Cloud solutions designed to ship fast and run reliably.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="service">
+            <h3>Cloud Infrastructure</h3>
+            <p>
+              Set up compute, networking, storage, and access controls with a cloud-first mindset.
+              Built for security and scale.
+            </p>
+            <ul>
+              <li>VM + VPC setup</li>
+              <li>IAM + least privilege</li>
+              <li>Storage + backups</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3>Containerization</h3>
+            <p>
+              Standardize environments with Docker so your app runs the same everywhere —
+              laptop, staging, and production.
+            </p>
+            <ul>
+              <li>Dockerfiles + images</li>
+              <li>Multi-service setups</li>
+              <li>Deployment automation</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3>DevOps + CI/CD</h3>
+            <p>
+              Automate builds, tests, and deployments to reduce downtime and ship with confidence.
+            </p>
+            <ul>
+              <li>Build + release pipelines</li>
+              <li>Environment promotion</li>
+              <li>Rollbacks + versioning</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3>Web + API Delivery</h3>
+            <p>
+              Build clean frontends and scalable backends that integrate with cloud services.
+            </p>
+            <ul>
+              <li>Static websites</li>
+              <li>APIs + integrations</li>
+              <li>Performance tuning</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3>Observability</h3>
+            <p>
+              Keep production healthy with logging, monitoring, and actionable alerts.
+            </p>
+            <ul>
+              <li>Metrics + dashboards</li>
+              <li>Error tracking</li>
+              <li>Uptime monitoring</li>
+            </ul>
+          </article>
+
+          <article class="service">
+            <h3>Security Basics</h3>
+            <p>
+              Practical security improvements that reduce risk without slowing teams down.
+            </p>
+            <ul>
+              <li>Secrets handling</li>
+              <li>Least privilege access</li>
+              <li>Secure defaults</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Approach -->
+    <section id="approach" class="section section--alt">
+      <div class="container">
+        <div class="section__head">
+          <h2>How we work</h2>
+          <p>A simple process built around clarity and execution.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <span class="step__num">1</span>
+            <h3>Assess</h3>
+            <p>We review goals, current architecture, constraints, and risks.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">2</span>
+            <h3>Design</h3>
+            <p>We propose a cloud-ready plan that balances cost, reliability, and speed.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">3</span>
+            <h3>Build</h3>
+            <p>We implement infrastructure, containerization, and deployment workflows.</p>
+          </div>
+          <div class="step">
+            <span class="step__num">4</span>
+            <h3>Operate</h3>
+            <p>We add monitoring and handoff documentation for long-term success.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container about">
+        <div class="about__text">
+          <h2>About JAG Software Ace Enterprises</h2>
+          <p>
+            We’re a cloud-focused software engineering brand built around practical delivery:
+            clean systems, repeatable deployments, and infrastructure that won’t surprise you later.
+          </p>
+          <p>
+            Whether you’re launching a new product or modernizing an existing one, we help you
+            move to a cloud-native workflow with confidence.
+          </p>
+        </div>
+
+        <div class="about__box">
+          <h3>Core principles</h3>
+          <ul class="checklist">
+            <li>Simple, maintainable architecture</li>
+            <li>Security-first defaults</li>
+            <li>Automation over manual steps</li>
+            <li>Documentation that’s actually usable</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section section--alt">
+      <div class="container contact">
+        <div class="contact__text">
+          <h2>Contact</h2>
+          <p>
+            Share what you’re building and what “done” looks like. We’ll respond with next steps and a clear plan.
+          </p>
+
+          <div class="contact__meta">
+            <div><strong>Email:</strong> <span class="muted">your-email@domain.com</span></div>
+            <div><strong>Location:</strong> <span class="muted">Remote / On-site by request</span></div>
+          </div>
+        </div>
+
+        <form class="form" onsubmit="return false;" aria-label="Contact form (static)">
+          <label>
+            Name
+            <input type="text" placeholder="Your name" />
+          </label>
+          <label>
+            Email
+            <input type="email" placeholder="you@example.com" />
+          </label>
+          <label>
+            Project details
+            <textarea rows="5" placeholder="What do you need help with?"></textarea>
+          </label>
+          <button class="btn" type="button" title="Static site: wire this to a backend later">
+            Send message
+          </button>
+          <p class="form__hint">
+            This is a static site — we can connect this to an email service or backend later.
+          </p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© <span id="year"></span> JAG Software Ace Enterprises. All rights reserved.</span>
+      <span class="muted">Built for cloud-ready deployment.</span>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
