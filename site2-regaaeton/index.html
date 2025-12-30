@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Top Reggaeton Hits — Playlist Board</title>
+  <style>
+    :root{
+      --bg:#070616;
+      --fg:rgba(255,255,255,.92);
+      --mut:rgba(255,255,255,.72);
+      --line:rgba(255,255,255,.14);
+      --card:rgba(255,255,255,.05);
+      --shadow:0 22px 80px rgba(0,0,0,.62);
+      --neon1:#a78bfa;
+      --neon2:#22c55e;
+      --hot:#fb7185;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      color:var(--fg);
+      background:
+        radial-gradient(900px 520px at 12% 0%, rgba(167,139,250,.25), transparent 55%),
+        radial-gradient(900px 520px at 88% 10%, rgba(34,197,94,.18), transparent 55%),
+        repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 12px),
+        var(--bg);
+      line-height:1.6;
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:0 auto}
+    header{
+      position:sticky;top:0;z-index:5;
+      backdrop-filter:blur(10px);
+      background:rgba(7,6,22,.72);
+      border-bottom:1px solid var(--line);
+    }
+    .top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .mark{
+      width:46px;height:46px;border-radius:16px;border:1px solid var(--line);
+      display:grid;place-items:center;background:rgba(255,255,255,.06);
+      box-shadow:var(--shadow);font-weight:900;
+    }
+    .title{font-weight:950;letter-spacing:.8px;text-transform:uppercase}
+    .sub{font-size:12px;color:var(--mut)}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    nav a{font-weight:900;font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:.8px}
+    nav a:hover{color:var(--fg)}
+    .hero{padding:56px 0 18px;position:relative}
+    h1{margin:0;font-size:clamp(34px,4vw,56px);line-height:1.05;text-transform:uppercase;letter-spacing:1px}
+    .lead{margin:12px 0 0;color:var(--mut);max-width:72ch}
+    .pill{
+      display:inline-block;margin-top:14px;padding:8px 12px;border-radius:999px;
+      border:1px dashed rgba(167,139,250,.35);
+      background:rgba(167,139,250,.10);
+      font-weight:950;font-size:12px;color:rgba(255,255,255,.85);
+    }
+    .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:14px;margin-top:18px;align-items:start}
+    .card{
+      border:1px solid var(--line);border-radius:20px;padding:16px;background:var(--card);
+      box-shadow:var(--shadow);
+    }
+    .card h2{margin:0 0 10px;font-size:16px;text-transform:uppercase;letter-spacing:.9px}
+    .artist{
+      display:flex;align-items:center;justify-content:space-between;gap:10px;
+      padding:10px 12px;border:1px solid rgba(255,255,255,.12);border-radius:16px;
+      background:rgba(0,0,0,.22);margin:10px 0;
+    }
+    .artist b{color:rgba(255,255,255,.92)}
+    .badge{
+      font-size:12px;font-weight:950;padding:6px 10px;border-radius:999px;
+      border:1px solid rgba(255,255,255,.14);color:var(--mut);
+      background:rgba(255,255,255,.06);
+      white-space:nowrap;
+    }
+    .badge.hot{border-color:rgba(251,113,133,.30);background:rgba(251,113,133,.12);color:rgba(255,255,255,.88)}
+    .badge.neon{border-color:rgba(34,197,94,.25);background:rgba(34,197,94,.10);color:rgba(255,255,255,.88)}
+    .tracks{margin:0;padding-left:18px;color:var(--mut)}
+    .tracks li{margin:8px 0}
+    .meter{margin-top:12px;height:12px;border-radius:999px;border:1px solid rgba(255,255,255,.14);background:rgba(255,255,255,.06);overflow:hidden}
+    .meter > div{height:100%;width:70%;background:linear-gradient(90deg, rgba(167,139,250,.25), rgba(34,197,94,.55))}
+    .callout{
+      margin-top:12px;border:1px dashed rgba(255,255,255,.18);border-radius:16px;padding:12px;color:var(--mut);
+      background:rgba(0,0,0,.18);
+    }
+
+    /* Sponsor footer */
+    .sponsor{
+      margin-top:40px;
+      padding:22px 0;
+      border-top:1px solid rgba(255,255,255,0.15);
+      text-align:center;
+      color:rgba(255,255,255,0.75);
+      font-size:14px;
+    }
+    .sponsor-inner{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:10px;
+    }
+    .sponsor strong{
+      color:#ffffff;
+      font-weight:950;
+      letter-spacing:0.6px;
+    }
+    .sponsor img{
+      height:56px;
+      width:auto;
+      opacity:0.95;
+      filter: drop-shadow(0 10px 25px rgba(0,0,0,.45));
+    }
+
+    @media (max-width:920px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap top">
+      <div class="brand">
+        <div class="mark" aria-hidden="true">🎶</div>
+        <div>
+          <div class="title">Top Reggaeton Hits</div>
+          <div class="sub">A static “playlist board” (demo content)</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#artists">Artists</a>
+        <a href="#hits">Hit List</a>
+        <a href="#vibe">Vibe Meter</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <h1>Perreo Playlist Board</h1>
+      <p class="lead">
+        A quick snapshot of top reggaeton artists and a “hit list” for demo purposes.
+        (You can replace these items with your favorite tracks later.)
+      </p>
+      <span class="pill">Maluma • Bad Bunny • Ozuna • Karol G • J Balvin • Feid</span>
+
+      <div class="grid">
+        <section id="artists" class="card">
+          <h2>Top Artists</h2>
+
+          <div class="artist">
+            <b>Bad Bunny</b>
+            <span class="badge hot">Global</span>
+          </div>
+          <div class="artist">
+            <b>Karol G</b>
+            <span class="badge neon">Anthem</span>
+          </div>
+          <div class="artist">
+            <b>Ozuna</b>
+            <span class="badge">Melodic</span>
+          </div>
+          <div class="artist">
+            <b>Maluma</b>
+            <span class="badge">Pop-Crossover</span>
+          </div>
+          <div class="artist">
+            <b>J Balvin</b>
+            <span class="badge">Classic</span>
+          </div>
+          <div class="artist">
+            <b>Feid</b>
+            <span class="badge">New Wave</span>
+          </div>
+
+          <div class="callout">
+            Add more: Rauw Alejandro, Anuel AA, Myke Towers, Wisin &amp; Yandel, Daddy Yankee.
+          </div>
+        </section>
+
+        <section id="hits" class="card">
+          <h2>Hit List (Demo)</h2>
+          <ol class="tracks">
+            <li>Bad Bunny — (your favorite track here)</li>
+            <li>Karol G — (your favorite track here)</li>
+            <li>Ozuna — (your favorite track here)</li>
+            <li>Maluma — (your favorite track here)</li>
+            <li>J Balvin — (your favorite track here)</li>
+            <li>Feid — (your favorite track here)</li>
+          </ol>
+
+          <div id="vibe" class="callout" style="margin-top:14px">
+            <strong style="color:rgba(255,255,255,.90)">Vibe Meter</strong>
+            <div class="meter" aria-hidden="true"><div></div></div>
+            <div style="margin-top:8px;color:var(--mut);font-size:12px">
+              70% perreo • 30% chill • 100% energy
+            </div>
+          </div>
+
+          <footer class="sponsor">
+            <div class="sponsor-inner">
+              <span>Sponsored by</span>
+              <strong>JAG Software Ace Enterprises</strong>
+              <img src="assets/jaceg_logo.png" alt="JAG Software Ace Enterprises Logo"
+                   onerror="this.style.display='none'">
+              <span style="color:var(--mut);font-size:12px">Place <b>logo.png</b> in this folder to display it.</span>
+            </div>
+          </footer>
+        </section>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
